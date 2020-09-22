@@ -1,0 +1,3 @@
+#Magic methods
+
+#By Devin

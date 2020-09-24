@@ -14,6 +14,8 @@ class Fraction:
 
         return (n, d)
 
+    
+
 def main():
 
     n1 = 16

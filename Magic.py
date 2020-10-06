@@ -17,7 +17,7 @@ class Fraction:
     def __add__(self, other):
         if self.d == other.d:
             NNum = self.n + other.n
-            NDenom = self.d + other.d
+            NDenom = self.d
         else:
             N1 = other.d * self.n
             NDenom = other.d * self.d

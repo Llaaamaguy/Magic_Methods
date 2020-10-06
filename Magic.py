@@ -15,37 +15,27 @@ class Fraction:
         return (n, d)
 
     def __add__(self, other):
-        self.n
-        self.d
-        other.n
-        other.d
-        NNum = self.n + other.n
-        NDenom = self.d + other.d
+        if self.d == other.d:
+            NNum = self.n + other.n
+            NDenom = self.d + other.d
+        else:
+            N1 = other.d * self.n
+            NDenom = other.d * self.d
+            N2 = self.d * other.n
+            NNum = N1 + N2
         return Fraction(NNum, NDenom)  
     
     def __sub__(self, other):
-        self.n
-        self.d
-        other.n
-        other.d
         NNum = self.n - other.n
         NDenom = self.d - other.d
         return Fraction(NNum, NDenom)
     
     def __mul__(self, other):
-        self.n
-        self.d
-        other.n
-        other.d
         NNum = self.n * other.n
         NDenom = self.d * other.d
         return Fraction(NNum, NDenom)
 
     def __div__(self, other):
-        self.n
-        self.d
-        other.n
-        other.d
         NNum = self.n * other.d
         NDenom = self.d * other.n 
         return Fraction(NNum, NDenom)

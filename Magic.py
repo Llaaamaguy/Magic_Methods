@@ -26,8 +26,14 @@ class Fraction:
         return Fraction(NNum, NDenom)  
     
     def __sub__(self, other):
-        NNum = self.n - other.n
-        NDenom = self.d - other.d
+        if self.d == other.d:
+            NNum = self.n - other.n
+            NDenom = self.d
+        else:
+            N1 = other.d * self.n
+            NDenom = other.d * self.d
+            N2 = self.d * other.n
+            NNum = N1 - N2
         return Fraction(NNum, NDenom)
     
     def __mul__(self, other):
@@ -35,7 +41,7 @@ class Fraction:
         NDenom = self.d * other.d
         return Fraction(NNum, NDenom)
 
-    def __div__(self, other):
+    def __truediv__(self, other):
         NNum = self.n * other.d
         NDenom = self.d * other.n 
         return Fraction(NNum, NDenom)
@@ -60,7 +66,12 @@ def main():
     print('The reduced fraction is {}'.format(fract2.reduce()))
     added = fract1 + fract2
     print('Fraction 1 plus fraction 2 is {}'.format(added.reduce()))
-
+    subtracted = fract1 - fract2
+    print('Fraction 1 minus fraction 2 is {}'.format(subtracted.reduce()))
+    multiplied = fract1 * fract2
+    print('Fraction 1 times fraction 2 is {}'.format(multiplied.reduce()))
+    divided = fract1 / fract2
+    print('Fraction 1 divided by fraction 2 is {}'.format(divided.reduce()))
 
 if __name__ == "__main__":
     main() 

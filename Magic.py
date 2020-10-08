@@ -52,6 +52,19 @@ class Fraction:
     def __float__(self):
         return self.n / self.d
 
+def findPi():
+  realPi = 3.14
+  realPi = int(realPi)
+  levels = #number of levels to compute
+  #This function will use generalized continued fractions to approximate pi
+
+def goldenRatio():
+  realGoldenRatio = 1.61
+  realGoldenRatio = int(realGoldenRatio)
+  levels = #number of levels to compute
+  #This funtion will be similar to findPi except instead of finding pi it will be approximating the golden ratio
+  
+
 def main():
 
     n1 = 16

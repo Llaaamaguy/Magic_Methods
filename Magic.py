@@ -52,8 +52,6 @@ class Fraction:
     def __float__(self):
         return self.n / self.d
 
-    
-
 def main():
 
     n1 = 16
@@ -62,8 +60,11 @@ def main():
     n4 = 20
     fract1 = Fraction(n1, n2)
     fract2 = Fraction(n3, n4)
-    print('The reduced fraction is {}'.format(fract1.reduce()))
-    print('The reduced fraction is {}'.format(fract2.reduce()))
+    print('The starting fractions are:')
+    print(n1, 'over', n2)
+    print(n3, 'over', n4, '\n')
+    print('The reduced fraction 1 is {}'.format(fract1.reduce()))
+    print('The reduced fraction 2 is {}'.format(fract2.reduce()))
     added = fract1 + fract2
     print('Fraction 1 plus fraction 2 is {}'.format(added.reduce()))
     subtracted = fract1 - fract2

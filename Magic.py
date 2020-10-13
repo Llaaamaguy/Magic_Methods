@@ -54,16 +54,16 @@ class Fraction:
 
 def findPi():
   realPi = 3.14
-  realPi = int(realPi)
-  levels = #number of levels to compute
+  levels = 1
+  #number of levels to compute
   #This function will use generalized continued fractions to approximate pi
 
 def goldenRatio():
   realGoldenRatio = 1.61
-  realGoldenRatio = int(realGoldenRatio)
-  levels = #number of levels to compute
+  levels = 1
+  #number of levels to compute
   #This funtion will be similar to findPi except instead of finding pi it will be approximating the golden ratio
-  
+
 
 def main():
 
@@ -85,7 +85,7 @@ def main():
     multiplied = fract1 * fract2
     print('Fraction 1 times fraction 2 is {}'.format(multiplied.reduce()))
     divided = fract1 / fract2
-    print('Fraction 1 divided by fraction 2 is {}'.format(divided.reduce()))
+    print('Fraction 1 truedived by fraction 2 is {}'.format(divided.reduce()))
 
 if __name__ == "__main__":
     main() 

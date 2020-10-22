@@ -56,12 +56,10 @@ def goldenRatio(levels):
     print("\n Golden ratio approximations:")
     iteration = Fraction(2, 1)
     one = Fraction(1, 1)
-    iterationCounter = 1
     for i in range(levels):
         iteration = one + one / iteration
         reduced = iteration.reduce()
-        print(iterationCounter, "iterations:", reduced)
-        iterationCounter += 1
+        print(i, "iterations:", reduced)
 
 def main():
     n1 = 16
@@ -84,6 +82,5 @@ def main():
     divided = fract1 / fract2
     print('Fraction 1 divided by fraction 2 is {}'.format(divided.reduce()))
     goldenRatio(30)
-
 if __name__ == "__main__":
     main() 
